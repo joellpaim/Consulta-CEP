@@ -34,7 +34,9 @@ class ApiCorreios():
         except zeep.exceptions.Fault as e:
             raise exceptions.BaseException(e)
 
-while True:
+rodar = True
+
+while rodar:
     sys("cls")
     cep = input("\nCEP: ")
 
@@ -58,4 +60,14 @@ while True:
     except Exception as e:
         print(f"\nErro: {e}\n")
 
-    sys("pause")
+    continuar = str()
+
+    while continuar != "Y" and continuar != "n":
+        continuar = input("Continuar? (Y/n) ")
+
+        if continuar == "Y":
+            break
+        elif continuar == "n":
+            rodar = False
+        else:
+            print("\nOpção inválida!")
