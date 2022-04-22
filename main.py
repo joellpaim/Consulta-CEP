@@ -1,5 +1,4 @@
 import warnings
-from sqlalchemy import true
 import zeep
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import exceptions
@@ -35,7 +34,7 @@ class ApiCorreios():
         except zeep.exceptions.Fault as e:
             raise exceptions.BaseException(e)
 
-while true:
+while True:
     sys("cls")
     cep = input("\nCEP: ")
 
